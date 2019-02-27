@@ -2,6 +2,7 @@
 #include "display.h"
 #include "shader.h"
 #include "mesh.h"
+#include "texture.h"
 
 
 // Window dimensions
@@ -13,6 +14,7 @@ int main()
 	Display display(800, 600, "Hello World!");
 	// I am assuming that ./ does nothing in this case ? 
 	Shader shader("./res/basicShader");
+	Texture texture("./res/bricks.jpg");
 
 	Vertex vertices[] = 
 	{ 

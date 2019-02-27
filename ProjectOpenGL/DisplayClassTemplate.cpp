@@ -9,6 +9,6 @@ public:
 protected: 
 private: 
 	Display(const Display& other) {}
-	Display& operator=(const Display& other) {}
+	void operator=(const Display& other) {}
 
 };
