@@ -9,25 +9,25 @@ Texture::Texture(const std::string& fileName)
 
 	/*unsigned*/int width, height, numComponents;
 	// used for loading texture data
-	stbi_uc* imageData = stbi_load(fileName.c_str(), &width, &height, &numComponents, 4);
+	unsigned char* imageData = stbi_load(fileName.c_str(), &width, &height, &numComponents, 4);
 
-	if (imageData)
-		std::cerr << "Texture loadning failed for texture: " << fileName << std::endl;
+	if (imageData == 0)
+		std::cerr << "Texture loading failed for texture: " << fileName << std::endl;
 
 	glGenTextures(1, &m_texture);
 	glBindTexture(GL_TEXTURE_2D, m_texture);
 
 	// specefying more data about the image we are sending
-	glTextureParameteri(
+	glTexParameteri(
 		GL_TEXTURE_2D,
 		// controls texture wraping (what happens outsinde the boundries (x and y))
 		GL_TEXTURE_WRAP_S,
 		// tells us what should happen in case we bridge the boundrie
 		GL_REPEAT
 	);
-	glTextureParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-	glTextureParameterf(
+	glTexParameterf(
 		GL_TEXTURE_2D,
 		// we control what will happen when the texture goes of in to the distance (MIN) and 
 		// when the texture becomes takes up more pixels than it has (MAG)
@@ -35,7 +35,7 @@ Texture::Texture(const std::string& fileName)
 		// interpolates between existing colors
 		GL_LINEAR
 	);
-	glTextureParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	// sending our texture to the GPU
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
