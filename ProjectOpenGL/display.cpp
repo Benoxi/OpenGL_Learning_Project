@@ -41,12 +41,16 @@ Display::Display(int width, int height, const std::string& title)
 	}
 
 	glViewport(0, 0, screenWidth, screenHeight);
+
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
+	glCullFace(GL_BACK);
 }
 
 void Display::Clear(float R, float G, float B, float O)
 {
 	glClearColor(R, G, B, O);
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 Display::~Display()
