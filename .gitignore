@@ -2,5 +2,17 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/packages/glm.0.9.9.300
+/packages
 /.vs
+/Debug
+/Release
+/ProjectOpenGL.sln
+/TerrainIdea
+/ProjectOpenGL/res
+/ProjectOpenGL/Debug
+/ProjectOpenGL/GK1_524_160.asc
+/ProjectOpenGL/glew32.dll
+/ProjectOpenGL/packages.config
+/ProjectOpenGL/ProjectOpenGL.vcxproj
+/ProjectOpenGL/ProjectOpenGL.vcxproj.filters
+/ProjectOpenGL/ProjectOpenGL.vcxproj.user
