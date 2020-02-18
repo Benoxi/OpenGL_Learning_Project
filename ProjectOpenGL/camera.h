@@ -24,9 +24,9 @@ private:
 	Camera(const Camera& other) {}
 	void operator=(const Camera& other) {}
 
-	glm::mat4 m_perspective;
-	glm::vec3 m_position;
-	glm::vec3 m_foward;
-	glm::vec3 m_up;
+	glm::mat4 m_perspective = glm::mat4();
+	glm::vec3 m_position = glm::vec3();
+	glm::vec3 m_foward = glm::vec3();
+	glm::vec3 m_up = glm::vec3();
 
 };

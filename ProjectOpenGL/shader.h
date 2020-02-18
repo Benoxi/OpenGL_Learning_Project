@@ -1,6 +1,4 @@
 #pragma once
-
-
 #include <string>
 #include <GL/glew.h>
 
@@ -34,7 +32,7 @@ private:
 		NUM_UNIFORMS
 	};
 
-	GLuint m_program;
-	GLuint m_shaders[NUM_SHADERS];
-	GLuint m_uniforms[NUM_UNIFORMS];
+	GLuint m_program = NULL;
+	GLuint m_shaders[NUM_SHADERS] = {};
+	GLuint m_uniforms[NUM_UNIFORMS] = {};
 };

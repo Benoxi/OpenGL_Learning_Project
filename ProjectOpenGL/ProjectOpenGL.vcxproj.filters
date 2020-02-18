@@ -33,9 +33,6 @@
     <ClCompile Include="texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\Downloads\glad\glad\src\glad.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="obj_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -72,7 +69,6 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="res\basicShader.vs">
       <Filter>Resource Files</Filter>
     </None>
@@ -80,5 +76,6 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="res\basicShader.fs.vsspell" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

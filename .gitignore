@@ -16,3 +16,9 @@
 /ProjectOpenGL/ProjectOpenGL.vcxproj
 /ProjectOpenGL/ProjectOpenGL.vcxproj.filters
 /ProjectOpenGL/ProjectOpenGL.vcxproj.user
+/ProjectOpenGL/x64
+*.ilk
+*.exe
+*.pdb
+.log
+.obj

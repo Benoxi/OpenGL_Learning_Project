@@ -10,7 +10,7 @@
 class Display
 {
 public:
-	GLFWwindow* m_window;
+	GLFWwindow* m_window = NULL;
 
 	Display(int width, int height, const std::string& title);
 	void Clear(float R, float G, float B, float O);
@@ -21,7 +21,7 @@ private:
 	Display(const Display& other) {}
 	void operator=(const Display& other) {}
 
-	int screenWidth;
-	int screenHeight;
+	int screenWidth = 0;
+	int screenHeight = 0;
 };
 

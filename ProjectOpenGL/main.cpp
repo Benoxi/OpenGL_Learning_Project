@@ -13,11 +13,14 @@ const GLint WIDTH = 800, HEIGHT = 600;
 int main()
 {
 	Display display(WIDTH, HEIGHT, "Hello World!");
-	// I am assuming that ./ does nothing in this case ? 
+
+	// ./ should look to current directory
 	Shader shader("./res/basicShader");
 	Texture texture("./res/bricks.jpg");
 	Mesh mesh2("./res/monkey3.obj");
+
 	Transform transform;
+
 	Camera camera(glm::vec3(0, 0, -4), 70.0f, (float)WIDTH/(float)HEIGHT, 0.01f, 1000.0f);
 
 	float counter = 0.0f;
